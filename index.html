@@ -11,9 +11,24 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	<style>
+      .cursor {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 5px;
+        background-color: red;
+        z-index: 9999;
+        pointer-events: none;
+		 }
+		 body {
+    cursor: none;
+  }
+      
+    </style>
 	</head>
 	<body class="is-preload">
-
+	 <div style="zoom: 90%;">
 		<!-- Wrapper -->
 			<div id="wrapper" class="fade-in">
 
@@ -219,6 +234,17 @@ calculations and FEA simulations</p>
 			</div>
 
 		<!-- Scripts -->
+					 <div id="root"></div>
+    <script>
+      const cursor = document.createElement("div");
+      cursor.classList.add("cursor");
+      document.body.appendChild(cursor);
+      
+      document.addEventListener("mousemove", e => {
+        cursor.style.left = e.pageX + "px";
+        cursor.style.top = e.pageY + "px";
+      });
+    </script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
