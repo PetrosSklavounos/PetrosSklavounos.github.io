@@ -514,6 +514,14 @@ print 'It took ' + i + ' iterations to sort the deck.';
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+									<script>
+  var images = document.getElementsByTagName('img');
+  for (var i = 0; i < images.length; i++) {
+    images[i].addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+    });
+  }
+</script>
 
 	</body>
 </html>
