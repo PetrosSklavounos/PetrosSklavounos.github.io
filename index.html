@@ -25,7 +25,23 @@
 		 body {
     cursor: none;
   }
-      
+ .slideshow-container {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slideshow-container img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
     </style>
 	</head>
 	<body class="is-preload">
@@ -82,53 +98,49 @@
 									<a href="home2.html" class="page">2</a>
 									<a href="home3.html" class="page">3</a>
 									<a href="home4.html" class="page">4</a>
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
 									
 								</div>
 								</center>
 								</header>
 
+  
+
+
 						<!-- Posts -->
 							<section class="posts">
-								<article>
-									
-									<img src="images/profile.jpeg" 
-										width="400" 
-										height=auto />
-									
-									<ul class="actions special">
-										<li><a href="gallery.html" class="button">More Photos</a></li>
-									</ul>
-								</article>
-							
-								
-								<article>
-									<header>
-										<span class="date">December 16, 2022</span>
-										<h2><a href="Rectangular.html">Rectangular plate stress,deflection, and twist analysis project.<br />
-								</a></h2>
-									</header>
-									<a href="Rectangular.html" class="image fit"><img src="images/Beam profile picture.jpg" alt="" /></a>
-									<p>A compiled summary of the final shelf design parameters and measurements, for the shelf to carry 200 lb, have a maximum deflection of 1/2" relative to the corners, and a minimum factor of safety of 3.The software used was LaTex,OnShape,Ansys APDL, and MatLab.</p>
-							
-									<ul class="actions special">
-										<li><a href="Rectangular.html" class="button">read more</a></li>
-									</ul>
-								</article>
-									<article>
-									<header>
-										<span class="date">December 4, 2022</span>
-										<h2><a href="Turducken.html"> Cooking and Transient Thermal Analysis using Altair Hypermesh and Ansys Workbench <br />
-								</a></h2>
-									</header>
-									<a href="Turducken.html" class="image fit"><img src="images/Turducken pfp.PNG" alt=""style="width: 3.5 in; height: 5in" /></a>
-									<p>A turducken is to be cooked with the addition of electric resistance skewers which may be placed through the turkey. The design of the skewers and the temperature of the oven will be designed to optimize for the fastest cook time,
-with the least amount of turducken burnt. </p>
-							
-									<ul class="actions special">
-										<li><a href="Turducken.html" class="button">read more</a></li>
-									</ul>
-								</article>
-								<article>
+    <article class="slideshow-post">
+        <div class="slideshow-container">
+            <img id="slideshow-image" src="images/profile.jpeg" width="400" height="auto" />
+        </div>
+        <ul class="actions special">
+            <li><a href="gallery.html" class="button">More Photos</a></li>
+        </ul>
+    </article>
+    <article class="grid-post">
+        <header>
+            <span class="date">December 16, 2022</span>
+            <h2><a href="Rectangular.html">Rectangular plate stress, deflection, and twist analysis project.</a></h2>
+        </header>
+        <a href="Rectangular.html" class="image fit"><img src="images/Beam profile picture.jpg" alt="" /></a>
+        <p>A compiled summary of the final shelf design parameters and measurements, for the shelf to carry 200 lb, have a maximum deflection of 1/2" relative to the corners, and a minimum factor of safety of 3. The software used was LaTex, OnShape, Ansys APDL, and MatLab.</p>
+        <ul class="actions special">
+            <li><a href="Rectangular.html" class="button">read more</a></li>
+        </ul>
+    </article>
+    <article class="grid-post">
+        <header>
+            <span class="date">December 4, 2022</span>
+            <h2><a href="Turducken.html">Cooking and Transient Thermal Analysis using Altair Hypermesh and Ansys Workbench</a></h2>
+        </header>
+        <a href="Turducken.html" class="image fit"><img src="images/Turducken pfp.PNG" alt="" style="width: 3.5in; height: 5in" /></a>
+        <p>A turducken is to be cooked with the addition of electric resistance skewers which may be placed through the turkey. The design of the skewers and the temperature of the oven will be designed to optimize for the fastest cook time, with the least amount of turducken burnt.</p>
+        <ul class="actions special">
+            <li><a href="Turducken.html" class="button">read more</a></li>
+        </ul>
+    </article>
+<article>
 									<header>
 										<span class="date">November 7, 2022</span>
 										<h2><a href="Windturbine.html">Design and Analysis of a Wind Turbine with FEA ANSYS software<br />
@@ -193,10 +205,32 @@ calculations and FEA simulations</p>
 										<li><a href="cart.html" class="button">read more</a></li>
 									</ul>
 								</article>
-								
-							</section>
+<style>
+    .slideshow-post {
+        grid-column: 1 / 3;
+    }
 
-						<!-- Footer -->
+    .slideshow-container {
+        width: 100%;
+        height: 0;
+        padding-bottom: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .slideshow-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+.slideshow-post ul.actions {
+        margin-top: 20px; /* Adjust the margin value as per your preference */
+    }
+</style>
+	</section>					<!-- Footer -->
 							<footer>
 								<div class="pagination">
 									<!--<a href="#" class="previous">Prev</a>-->
@@ -262,6 +296,20 @@ calculations and FEA simulations</p>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+<script>
+    const slideshowContainer = document.getElementById("slideshow-image");
+    const images = ["images/profile.jpeg", "images/cuttingplastic.PNG", "images/thermalstudy.png"]; // Add additional image paths here
+    let currentImageIndex = 0;
+
+    function changeSlide() {
+        slideshowContainer.src = images[currentImageIndex];
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+    }
+
+    setInterval(changeSlide, 2000); // Change slide every 2.5 seconds (adjust as needed)
+</script>
+
+
 
 	</body>
 </html>
