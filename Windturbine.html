@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>Wind Turbine Design Project-Petros</title>
@@ -28,63 +23,57 @@
 						<ul class="links">
 							<li><a href="index.html">Home</a></li>
 							<li><a href="resume.html">Resume</a></li>
-							<li class="active"><a href="projects.html">Projects </a></li>
+							<li class="active"><a href="projects.html">Projects</a></li>
 							<li><a href="gallery.html">Photo Gallery</a></li>
 						</ul>
 						<ul class="icons">
 							<li><a href="https://www.linkedin.com/in/petros-sklavounos-b2b726231?trk=public_profile_browsemap" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
 							<li><a href="mailto:petros.sklavounos@cooper.edu" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
 						</ul>
-										</div>
-										
 					</nav>
 
 				<!-- Main -->
 					<div id="main">
-<!-- Post -->
-							<section class="post">
-								<header >
-									<span class="date">November 7, 2022</span>
-									<h1>Design and Analysis of a Wind Turbine with FEA ANSYS Software</h1>
-									</header>
-								<div align = "center" style="backround-color:blue;width: 100%; height:660px">
-								<embed style="width: 90%; height: 90%"src="documents/wind.pdf" type= "application/pdf"><embed> 
-								</div>
-								<p> To optimize parameter selection, the above variables were
-parametrized in ANSYS Workbench and set to automatically run
-over 100 iterations of simulations that independently vary the
-tower geometry parameters within their determined ranges.
-The raw output was then exported to a CSV, where Excel filters were then applied to filter out any iterations that failed the
-design requirements (expressed as constraint conditions on output values below). Out of the remaining iterations, the optimal
-one was selected by applying an additional filter for minimal
-tower mass, which corresponds to the least amount of material
-usage.</p>
+						<!-- Post -->
+						<section class="post">
+							<header>
+								<span class="date">November 7, 2022</span>
+								<h1>Design and Analysis of a Wind Turbine with FEA ANSYS Software</h1>
+							</header>
+							
+							<h2>Objective</h2>
+							<p> The aim of the project was to design and analyze a wind turbine using FEA ANSYS software, optimizing parameters for the most effective design. </p>
 
-<p>Nodal analysis of the first 6 modes was conducted on the tower
-using pre-stress conditions taken from the static structural solution. As the above images show, inherent symmetries in the geometry results in corresponding pairs of frequencies and mode
-shapes being generated, thus while 6 modes were simulated, we
-only need to report modes 1, 3, and 5. Each natural frequency
-calculated across the 6 environmental cases considered for a single design iteration is then cross checked to ensure that they do
-not fall into the frequency range of the spinning blades.</p>
+							<h2>Software</h2>
+							<p> The design and analysis were performed using ANSYS Workbench. The software allowed for parametrization and automated iterations of simulations. </p>
 
-								<center>
-						
-</center>
+							<h2>Skills Learned</h2>
+							<p> This project improved skills in design and analysis using ANSYS Workbench, parametrization, automation of simulations, and nodal analysis. </p>
 
-						<span class="image fit"><img src="images/resultswind.png" alt="" /></span>		</section>
-						</div>
-						
+							<h2>Design and Assumptions</h2>
+							<p> The design was optimized by automatically running over 100 iterations of simulations. The raw output was exported to a CSV, and filters were applied to ensure the design requirements were met. The optimal iteration was selected for minimal tower mass, ensuring efficient material usage. A nodal analysis of the first 6 modes was conducted on the tower using pre-stress conditions taken from the static structural solution. </p>
 
+							<h2>Project Results</h2>
+							<p> The final design ensured that each natural frequency calculated did not fall into the frequency range of the spinning blades. This was achieved by cross-checking each natural frequency across the 6 environmental cases considered for a single design iteration. </p>
+							
+							<div align="center" style="width: 100%; height:660px">
+								<embed style="width: 90%; height: 90%" src="documents/wind.pdf" type="application/pdf"></embed>
+							</div>
 
-						
+							<center>
+							    <img src="images/resultswind.png" alt="Results of the wind turbine design." style="width: 60%; height: 60%;"/>
+							    <figcaption>Wind Turbine Design Results</figcaption>
+							</center>
+						</section>
+					</div>
 						
 				<!-- Copyright -->
 					<div id="copyright">
-						<ul><li>&copy; Petros Sklavounos</li><li>2023</a></li></ul>
+						<ul><li>&copy; Petros Sklavounos</li><li>2023</li></ul>
 					</div>
-
 			
 		</div>
+
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
