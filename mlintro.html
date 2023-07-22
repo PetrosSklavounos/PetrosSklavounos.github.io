@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Forecasting Barometric Pressure in NYC Project</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <link rel="icon" type="image/png" href="images/pfp.PNG" />
+    </head>
+    <body class="is-preload">
+    <div style="zoom: 80%;">
+        <div id="wrapper">
+            <header id="header">
+                <a href="index.html" class="logo">Home</a>
+            </header>
+            <nav id="nav">
+                <ul class="links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li class="active"><a href="projects.html">Projects </a></li>
+                    <li><a href="gallery.html">Photo Gallery</a></li>
+                </ul>
+                <ul class="icons">
+                    <li><a href="https://www.linkedin.com/in/petros-sklavounos-b2b726231?trk=public_profile_browsemap" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                    <li><a href="mailto:petros.sklavounos@cooper.edu" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+                </ul>
+            </nav>
+            <div id="main">
+                <section class="post">
+                    <header>
+                        <span class="date">June 20, 2023</span>
+                        <h1>FORECASTING BAROMETRIC PRESSURE IN NYC USING MACHINE LEARNING MODELS</h1>
+                    </header>
+                    <div align="center" style="width: 100%; height:660px">
+                        <h2 style="text-align: left;">Knowledge Documentation For Future Self</h2>
+                        <embed style="width: 90%; height: 90%" src="documents/Mlintro.pdf" type="application/pdf"></embed> 
+                    </div>
+                    <div style="margin-top: 20px;">
+					<div align="center" style="width: 100%; height:660px">
+                        <h2 style="text-align: left;">Graphs and Results</h2>
+                        <embed style="width: 90%; height: 90%" src="documents/Mlintrograph.pdf" type="application/pdf"></embed> 
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <h2>Objective</h2>
+                        <p>The primary goal of this project is to forecast NYC's barometric pressure using historical data and machine learning models including ARIMA, LSTM, and Gradient Boosting.</p>
+
+                        <h2>Method</h2>
+                        <p>Data processing and model training are handled by Scikit-learn and Pandas. The project performs a comparative analysis to evaluate model performance, using actual vs. predicted values and future forecasts.</p>
+
+                        <h2>Software</h2>
+                        <p>A mix of programming languages and environments, such as Python, Scikit-learn, Pandas, and machine learning algorithms including ARIMA, LSTM, and Gradient Boosting. Google Colab,Jupyter, and Spyder were used for debugging and running the code. </p>
+
+                        <h2>Limitations</h2>
+                        <ul>
+                            <li>ARIMA model performance was impacted by outliers in the data and showed difficulty in handling long-term predictions.</li>
+                            <li>The ARIMA model required manual selection of its order parameters (p, d, q), requiring significant domain knowledge and experimentation.</li>
+                            <li>Despite ARIMA's versatility, it may not be ideal for predicting barometric pressure due to complex atmospheric dynamics and non-linear behavior in the data.</li>
+                            <li>LSTM models were computationally expensive to train due to their complex architecture and might require larger datasets for effective learning.</li>
+                            <li>LSTM models are susceptible to overfitting, leading to poor generalization on unseen data.</li>
+                            <li>Gradient Boosting can be computationally expensive, particularly with larger datasets and deeper trees. It also may be sensitive to noise and prone to overfitting in such cases.</li>
+                            <li>Both ARIMA and LSTM models showed difficulty in handling data with a single variable, limiting the quality of the forecasts.</li>
+                            <li>The issue of the data mismatch for plotting indicates the careful preprocessing and data alignment needed in such time series models.</li>
+                        </ul>
+						
+						<h2>Challenges</h2>
+                        <ul>
+                            <li>Initial attempts at training the models resulted in overfitting and warnings of convergence failure, suggesting that the models might not have been well-suited to the data.</li>
+                            <li>You faced a data shape mismatch between the x-axis values(time) and the y-axis values (barometric pressure) when plotting.</li>
+                            <li>The LSTM prediction initially spiked uncontrollably due to potential issues like complex patterns in data, overfitting, limited training data, poor input representation, poorly tuned hyperparameters, and outliers or anomalies.</li>
+                        </ul>
+						<h2>Conclusions</h2>
+                        <ul>
+                            <li>Despite the above limitations and challenges, the use of LSTM and Gradient Boosting models showed promise in handling complex patterns in time series data, offering the possibility of more accurate and robust forecasts compared to the ARIMA model.</li>
+                            <li>The exploration of different epochs revealed that eight epochs were enough for a stable loss of 0.0174 onwards. This kind of tuning is crucial in model performance and avoiding overfitting.</li>
+                            <li>The spike in LSTM's prediction was largely mitigated by feeding the model with more data, and using different years for training and testing sets, indicating the importance of sufficient and appropriately split data in model performance.</li>
+                            <li>While the models, especially Gradient Boosting, made reasonable forecasts, they could only produce flat line predictions when working with a single variable dataset. This highlights the importance of using multivariate datasets for more accurate and meaningful predictions.</li>
+                            <li>Finally, the experiment demonstrated the importance of proper data parsing and column alignment in model training and prediction.</li>
+                        </ul>
+                        
+                    </div>
+                </section>
+            </div>
+            <div id="copyright">
+                <ul><li>&copy; Petros Sklavounos</li><li>2023</a></li></ul>
+            </div>
+        </div>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
