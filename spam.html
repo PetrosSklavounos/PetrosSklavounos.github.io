@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Spam Detection Project - Petros</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <link rel="icon" type="image/png" href="images/pfp.PNG" />
+</head>
+<body class="is-preload">
+<div style="zoom: 80%;">
+    <div id="wrapper">
+        <header id="header">
+            <a href="index.html" class="logo">Home</a>
+        </header>
+        <nav id="nav">
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li class="active"><a href="projects.html">Projects </a></li>
+                <li><a href="gallery.html">Photo Gallery</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="https://www.linkedin.com/in/petros-sklavounos-b2b726231?trk=public_profile_browsemap" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                <li><a href="mailto:petros.sklavounos@cooper.edu" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+            </ul>
+        </nav>
+        <div id="main">
+            <section class="post">
+                <header>
+                    <span class="date">June 21, 2023</span>
+                    <h1>MACHINE LEARNING PROJECT: SPAM DETECTION USING CNB CLASSIFIER</h1>
+                </header>
+                <div align="center" style="width: 100%; height:660px">
+                        <h2 style="text-align: left;">KNOWLEDGE DOCUMENTATION FOR FUTURE SELF</h2>
+                        <embed style="width: 90%; height: 90%" src="documents/spam.pdf" type="application/pdf"></embed> 
+                    </div>
+                    
+                    <h2>Objective</h2>
+                    <p>
+                        The objective of this project is to develop a machine learning model that can effectively classify emails as spam or not spam. The model will use the Naive Bayes algorithm along with TF-IDF vectorization for feature extraction.                     </p>
+                    
+                    <h2>Method</h2>
+                    <p>
+                        <ol>
+                            <li><strong>Text Preprocessing:</strong> The text data undergoes several preprocessing steps before being used for training and testing. These steps include converting all text to lowercase, removing special characters and punctuation, eliminating common English stop words, and removing hyperlinks.</li>
+                            <li><strong>Data Loading and Cleaning:</strong> The dataset containing email data is loaded from the 'emails.csv' file. Any infinite values are replaced with NaN, and rows with missing elements are dropped to ensure data integrity and reliability.</li>
+                            <li><strong>Data Splitting:</strong> The dataset is split into training and testing sets using a test size of 20%. This partitioning allows the model to be trained on one portion of the data and evaluated on another to assess its generalization capabilities.</li>
+                            <li><strong>Feature Extraction:</strong> The text data is transformed into TF-IDF (Term Frequency-Inverse Document Frequency) vectors. This technique converts text into numerical representations, capturing the importance of each word in the context of the entire corpus.</li>
+                            <li><strong>Training the Model:</strong> A Multinomial Naive Bayes classifier is chosen for its effectiveness in text classification tasks. The classifier is trained on the TF-IDF vectors of the training data.</li>
+                            <li><strong>Model Evaluation:</strong> The trained model is evaluated using the test set to measure its performance. Classification metrics, such as precision, recall, and F1-score, are used to assess the model's accuracy in differentiating spam from non-spam emails.</li>
+                        </ol>
+                    </p>
+
+                    <h2>Software</h2>
+                    <p>
+                        Python programming language and various libraries, including NumPy, Pandas, Scikit-learn, Regular Expressions (re), and TfidfVectorizer. Spyder was used as the python integrated development environment (IDE)
+                    </p>
+
+                    <h2>Limitations</h2>
+                    <p>
+                        <ol>
+                            <li><strong>Threshold-based Classification:</strong> The current implementation relies on a fixed threshold value to classify an email as spam or not spam. Adjusting this threshold may impact the balance between false positives and false negatives.</li>
+                            <li><strong>Model Sensitivity to Text Preprocessing:</strong> The accuracy of the Naive Bayes classifier may be affected by the chosen text preprocessing techniques. Different preprocessing methods might yield varying results.</li>
+                            <li><strong>Limited Dataset:</strong> The performance of the model heavily depends on the quality and diversity of the training data. A limited dataset may lead to overfitting or underfitting issues.The dataset used tried to encompass as many phishing techniques as possible, while also ensuring that informal conversations were not marked as spam. A few instances of payment requests for Ubers, and meeting at certain times were incorporated. </li>
+                            <li><strong>Dynamic Spam Patterns:</strong> As spammers continuously evolve their techniques, the model might not effectively capture emerging spam patterns.</li>
+                            <li><strong>Email Content Complexity:</strong> The model's effectiveness may vary based on the complexity and structure of the email content. Some sophisticated spam emails may go undetected.This is why I chose a, 'paste the content of the email into the terminal' approach so that it would greatly simplify this problem of reading emails.  </li>
+                        </ol>
+                    </p>
+                </div>
+            </section>
+        </div>
+        <div id="copyright">
+            <ul><li>&copy; Petros Sklavounos</li><li>2023</li></ul>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
