@@ -40,8 +40,86 @@
     left: 0;
 }
 
- 
+ /* Tag styles */
+        .tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
 
+        .tag {
+            padding: 5px 10px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+
+        /* Coding Tag style */
+    .coding-tag {
+        background-color: #007BFF;
+        color: #fff;
+    }
+
+    /* Machine Learning Tag style */
+    .machine-learning-tag {
+        background-color: #6F42C1;
+        color: #fff;
+    }
+
+    /* Design Tag style */
+    .design-tag {
+        background-color: #28A745;
+        color: #fff;
+    }
+
+    /* Data Analysis Tag style */
+    .data-analysis-tag {
+        background-color: #FFC107;
+        color: #fff;
+    }
+
+    /* Manufacturing Tag style */
+    .manufacturing-tag {
+        background-color: #DC3545;
+        color: #fff;
+    }
+
+    /* Research Tag style */
+    .research-tag {
+        background-color: #17A2B8;
+        color: #fff;
+    }
+
+    /* Thermal Tag style */
+    .thermal-tag {
+        background-color: #6610F2;
+        color: #fff;
+    }
+
+    /* Simulation Tag style */
+    .simulation-tag {
+        background-color: #E83E8C;
+        color: #fff;
+    }
+
+    /* Theoretical Tag style */
+    .theoretical-tag {
+        background-color: #20C997;
+        color: #fff;
+    }
+/* Experimentation Tag style */
+.experimentation-tag {
+    background-color: #198754;
+    color: #fff;
+}
+      .tag-date-container {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+      }
     </style>
 	</head>
 	<body class="is-preload">
@@ -120,19 +198,28 @@
     </article>
    <article class="grid-post">
          <header>
-            <span class="date">24 June, 2023</span>
-            <h2><a href="sudoku.html">Sudoku</a></h2>
+            
+			<span class="date">24 June, 2023</span>
+            
+			<h2><a href="sudoku.html">Sudoku</a></h2>
+			 
         </header>
         <p>Description of the Spam Filter Machine Learning project</p>
         <ul class="actions special">
             <li><a href="spamfilter.html" class="button">read more</a></li>
         </ul>
+		 
     </article>
     <article class="grid-post">
-        <header>
+        
+		<header>
+		
+                        
+                    
             <span class="date">21 June, 2023</span>
             <h2><a href="spam.html">Machine Learning Project: Spam Detection Using MNB Classifier</a></h2>
         </header>
+		<span class="tag coding-tag">Coding</span><span class="tag machine-learning-tag">Machine Learning</span><span class="tag data-analysis-tag">Data Analysis</span>
         <a href="spam.html" class="image fit"><img src="images/spampfp.PNG" alt="" style="width: 5in; height: 4.5in" /></a>
 		<p>This project develops a precise spam detection model. It reads CSV data for training, conducts advanced text preprocessing, and employs a Multinomial Naive Bayes classifier along with TF-IDF vectorization for efficient and accurate email categorization.</p>
         <ul class="actions special">
@@ -144,6 +231,7 @@
             <span class="date">20 June, 2023</span>
             <h2><a href="mlintro.html">Forecasting Barometric Pressure in NYC using Machine Learning Models</a></h2>
         </header>
+		<span class="tag coding-tag">Coding</span><span class="tag machine-learning-tag">Machine Learning</span><span class="tag data-analysis-tag">Data Analysis</span><span class="tag research-tag">Research</span>
 		<a href="mlintro.html" class="image fit"><img src="images/mlintropfp.PNG" alt="" style="width: 6in; height: 4.5in" /></a>
         <p>A Comparative Analysis of ARIMA, LSTM, and Gradient Boosting Algorithms.Utilizing historical data, this project forecasts NYC's barometric pressure employing ARIMA, LSTM, and Gradient Boosting models. Scikit-learn and Pandas handle data processing and model training. A comparative analysis assesses model performance with actual vs. predicted values and future forecasts.</p>
         <ul class="actions special">
@@ -155,6 +243,7 @@
             <span class="date">May 11, 2023</span>
             <h2><a href="vibration.html">Vibration Project: Modeling Cooper Hyperloop's Horizontal Stability.</a></h2>
         </header>
+		<span class="tag design-tag">Design</span><span class="tag data-analysis-tag">Data Analysis</span><span class="tag manufacturing-tag">Manufacturing</span><span class="tag research-tag">Research</span><span class="tag experimentation-tag">Experimentation</span>
         <a href="vibration.html" class="image fit"><img src="images/vibrationpfp.PNG" alt="" style="width: 6in; height: 4.5in" /></a>
         <p> Designed a scaled testing rig to analyze and optimize the stability system of a Hyperloop pod by simulating an uneven track for design optimization.</p>
         <ul class="actions special">
@@ -166,6 +255,7 @@
             <span class="date">May 10, 2023</span>
             <h2><a href="tunnel.html">Howard Silfin (ME’49) Mechanical Engineering Internship Award: Air Tunnel Project</a></h2>
         </header>
+		<span class="tag design-tag">Design</span><span class="tag manufacturing-tag">Manufacturing</span>
         <a href="tunnel.html" class="image fit"><img src="images/tunnelpfp.PNG" alt="" style="width: 6in; height: 4.5in" /></a>
         <p>Under Construction</p>
         <ul class="actions special">
@@ -178,6 +268,7 @@
 										<h2><a href="rod.html">Heat Transfer Project: Determining the Largest Heat Transfer Rate for Various Cross-Sectional Rods under Different Cooling Conditions <br />
 										</a></h2>
 									</header>
+									<span class="tag design-tag">Design</span><span class="tag thermal-tag">Thermal</span><span class="tag research-tag">Research</span><span class="tag experimentation-tag">Experimentation</span>
 									<a href="rod.html" class="image fit"><img src="images/rodpfp.PNG" alt=""style="width: 3.5 in; height: 5in" /></a>
 									<p>Under construction</p>
 									<ul class="actions special">
@@ -190,6 +281,7 @@
 										<h2><a href="m3.html">Effect of Temperature on Flame Velocity and Thrust of an Isopropyl Rocket <br />
 										</a></h2>
 									</header>
+									<span class="tag design-tag">Design</span><span class="tag data-analysis-tag">Data Analysis</span><span class="tag thermal-tag">Thermal</span><span class="tag research-tag">Research</span><span class="tag experimentation-tag">Experimentation</span>
 									<a href="m3.html" class="image fit"><img src="images/bottlepfp.PNG" alt=""style="width: 3.5 in; height: 3.5in" /></a>
 									<p>Under Construction</p>
 									<ul class="actions special">
@@ -203,6 +295,7 @@
 Ansys Fluent<br />
 										</a></h2>
 									</header>
+									<span class="tag design-tag">Design</span><span class="tag data-analysis-tag">Data Analysis</span><span class="tag simulation-tag">simulation</span><span class="tag research-tag">Research</span>
 									<a href="compressor.html" class="image fit"><img src="images/compressorpfp.png" alt=""style="width: 3.5 in; height: 5in" /></a>
 									<p>Under Construction </p>
 									<ul class="actions special">
@@ -216,6 +309,7 @@ Ansys Fluent<br />
 IC Engine using Ansys Fluent <br />
 										</a></h2>
 									</header>
+									<span class="tag design-tag">Design</span><span class="tag data-analysis-tag">Data Analysis</span><span class="tag simulation-tag">simulation</span><span class="tag research-tag">Research</span>
 									<a href="hxg.html" class="image fit"><img src="images/hxgpfp.PNG" alt=""style="width: 3.5 in; height: 5in" /></a>
 									<p> Under Construction</p>
 									<ul class="actions special">
@@ -228,6 +322,8 @@ IC Engine using Ansys Fluent <br />
 										<h2><a href="m1.html">Measuring the Young’s Modulus of a Vibrating Beam <br />
 										</a></h2>
 									</header>
+									<span class="tag design-tag">Design</span><span class="tag data-analysis-tag">Data Analysis</span><span class="tag experimentation-tag">Experimentation</span><span class="tag research-tag">Research</span>
+									
 									<a href="m1.html" class="image fit"><img src="images/beampfp.PNG" alt=""style="width: 3.5 in; height: 5in" /></a>
 									<p>Under Construction</p>
 									<ul class="actions special">
