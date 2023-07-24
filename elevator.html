@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Predictive Maintenance of Elevator Systems - Petros</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <link rel="icon" type="image/png" href="images/pfp.PNG" />
+</head>
+<body class="is-preload">
+<div style="zoom: 80%;">
+    <div id="wrapper">
+        <header id="header">
+            <a href="index.html" class="logo">Home</a>
+        </header>
+        <nav id="nav">
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li class="active"><a href="projects.html">Projects </a></li>
+                <li><a href="gallery.html">Photo Gallery</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="https://www.linkedin.com/in/petros-sklavounos-b2b726231?trk=public_profile_browsemap" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                <li><a href="mailto:petros.sklavounos@cooper.edu" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+            </ul>
+        </nav>
+        <div id="main">
+            <section class="post">
+                <header>
+                    <span class="date">June 24, 2023</span>
+                    <h1>MACHINE LEARNING PROJECT: PREDICTIVE MAINTENANCE OF ELEVATOR SYSTEMS</h1>
+                </header>
+               
+                    
+                    <h2>Objective</h2>
+                    <p>
+                        The objective of this project is to predict abnormal vibrations in an elevator system located in Brazil using machine learning models. By accurately predicting these abnormalities, we can anticipate maintenance needs, prevent potential system failures, thereby improving the efficiency and safety of the elevator.
+                    </p>
+                    
+                    <h2>Method</h2>
+                    <p>
+                        <ol>
+                            <li><strong>Data Acquisition and Cleaning:</strong> Public sensor data from an elevator system was used in this project. The dataset initially contained NaN values in the 'vibration' column, which were replaced with zero to clean the data.</li>
+                            <li><strong>Exploratory Data Analysis:</strong> The dataset was split into training and test sets with an 80:20 ratio.</li>
+                            <li><strong>Model Selection and Training:</strong> Linear Regression, Random Forest Regressor, and Gradient Boosting Regressor models were trained on the dataset.</li>
+                            <li><strong>Model Evaluation and Optimization:</strong> The performance of the models was evaluated using the Mean Absolute Error (MAE). Further optimization was achieved by increasing the number of estimators in the Random Forest model to 1000.</li>
+                        </ol>
+                    </p>
+
+                    <h2>Software</h2>
+                    <p>
+                        Python programming language along with various libraries, including NumPy, Pandas, Scikit-learn, and Matplotlib.
+                    </p>
+
+                    <h2>Limitations</h2>
+                    <p>
+                        <ol>
+                            <li><strong>Assumptions on NaN Values:</strong> The project assumes that the NaN values in the vibration data can be replaced with zero, which may not accurately reflect the real-world conditions.</li>
+                            <li><strong>Model Assumptions:</strong> The models assume that the relationships between the features and the target variable remain constant over time. In the real world, these relationships may change, requiring the model to be updated or retrained.</li>
+                            <li><strong>Evaluation Metric:</strong> The models were evaluated based on a single metric, the Mean Absolute Error. Other metrics, including the Mean Squared Error or R2 score, might provide different perspectives on model performance.</li>
+                        </ol>
+                    </p>
+					 <div align="center" style="width: 100%; height:660px">
+                        <h2 style="text-align: left;">Documentation</h2>
+                        <embed style="width: 90%; height: 90%" src="documents/elevator.pdf" type="application/pdf"></embed> 
+                </div>
+                <div align="center" style="width: 100%; height:660px">
+                        <h2 style="text-align: left;">Graphs and Results</h2>
+                        <embed style="width: 90%; height: 90%" src="documents/graphselevator.pdf" type="application/pdf"></embed> 
+                </div>
+                </div>
+            </section>
+        </div>
+        <div id="copyright">
+            <ul><li>&copy; Petros Sklavounos</li><li>2023</li></ul>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
