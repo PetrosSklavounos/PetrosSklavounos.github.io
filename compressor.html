@@ -1,87 +1,128 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Compressor Stage Design Project-Petros</title>
+		<title>Compressor Turboject CFD Project-Petros</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<link rel="icon" type="image/png" href="images/pfp.PNG" />
+		<link rel="icon" type="image/png" 
+<!-- Custom CSS -->
+    <style type="text/css">
+        .image-container {
+            display: flex;
+            justify-content: center; /* Center the images horizontally */
+gap: 10px;
+            align-items: center; /* Center the images vertically */
+        }
+
+        .image-container iframe {
+            width: 500px; /* Set the width to 50% to make them take half the container */
+            height: 400px; /* Maintain the aspect ratio */
+        }
+    </style>
+
+href="images/pfp.PNG" />
 	</head>
 	<body class="is-preload">
 	<div style="zoom: 80%;">
-		<!-- Wrapper -->
-			<div id="wrapper">
+		<div id="wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Home</a>
+			<header id="header">
+				<a href="index.html" class="logo">Home</a>
+			</header>
+
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="resume.html">Resume</a></li>
+					<li class="active"><a href="projects.html">Projects</a></li>
+					<li><a href="gallery.html">Photo Gallery</a></li>
+				</ul>
+				<ul class="icons">
+					<li><a href="https://www.linkedin.com/in/petros-sklavounos-b2b726231?trk=public_profile_browsemap" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="mailto:petros.sklavounos@cooper.edu" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+			</nav>
+
+			<div id="main">
+				<section class="post">
+					<header>
+						<span class="date">May 1, 2023</span>
+						<h1>Compressor Stage Design for Turbojet Engine using ANSYS Fluent</h1>
 					</header>
+					
+					
+					<!-- Post Content -->
+					
+						<h2>Objective</h2>
+						<p>The main objective of this study is to design and optimize a compressor stage for a new type of gas turbofan engine in 2 months. The compressor should achieve a minimum pressure ratio of 20:1 at the maximum design altitude of 37,000 feet. Additionally, the compressor is required to work efficiently at sea level under standard temperature and pressure conditions (STP). The design should also satisfy the constraint of an outer diameter of the compressor, including all necessary parts, being within the range of 4 to 6 feet. Furthermore, the maximum operating speed of any stage in the compressor should be limited to less than 50,000 rpm.</p>
+						
+						<h2>Software Used</h2>
+						<p>Altair Hypermesh was used for meshing the large model, while the computational fluid dynamics(CFD) software used was ANSYS Fluent Software. </p>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="resume.html">Resume</a></li>
-							<li class="active"><a href="projects.html">Projects</a></li>
-							<li><a href="gallery.html">Photo Gallery</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/petros-sklavounos-b2b726231?trk=public_profile_browsemap" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="mailto:petros.sklavounos@cooper.edu" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
-					</nav>
+						<h2>Skills Learned</h2>
+						<p>Throughout the course of this project, the team acquired and developed various skills. These include proficiency in using ANSYS Fluent for CFD simulations and meshing, understanding and applying the k-epsilon turbulence model, and implementing periodicity and profiles to simplify geometry representation for computational efficiency. Additionally, the team gained expertise in analyzing temperature and pressure contours, evaluating compression ratios, and visualizing velocity streamline plots. The project allowed for honing problem-solving skills related to compressor design, fluid dynamics, and heat transfer in gas turbine engines.
+<br>
+<br>
+ Above all technical skills, time management, teamwork, and perseverance are what lead to the success of this project.</p>
 
-				<!-- Main -->
-					<div id="main">
-						<!-- Post -->
-						<section class="post">
-							<header>
-								<span class="date">May 1, 2023</span>
-								<h1>Compressor Stage Design for Turbojet Engine using ANSYS Fluent</h1>
-							</header>
-							
-							<h2>Objective</h2>
-							<p></p>
+						<h2>Methodology</h2>
+						<p>The design and optimization of the compressor stage were carried out in a systematic manner. The team first defined the design objectives and constraints provided by the client. The compressor geometry was based on the NACA M8 airfoil for both the rotor and stator. Periodicity and profiles were used to model the entire compressor efficiently, and HyperMesh was employed to customize the meshing process.
+<br>
+<br>
+The simulations were conducted using ANSYS Fluent, employing the realizable k-epsilon turbulence model to accurately capture the fluid flow behavior. The simulations were performed at two key operating conditions: standard temperature and pressure at sea level and the maximum design altitude of 37,000 feet. The team conducted power approximations and analyzed the compression ratios to assess the compressor's performance at each stage.
+<br>
+<br>
+Finally, while the more effective and stress-free method of using the turbo feature in Ansys Fluent was an option, we instead used the old fashioned method of trial and error with manually tuning relaxation factors and constants for accuracy and residual regulation.   
+</p>
+						
+						<h2>Limitations</h2>
+While the study provided valuable insights into the design and optimization process of the compressor, it also faced some limitations. The use of periodicity and profiles may have introduced some simplifications that could affect the accuracy of the results, particularly when dealing with three-dimensional flow features. Additionally, the assumption of isentropic compression and inviscid flow might not sufficiently capture the real-world behavior of the compressor.
+<br>
 
-							<h2>Software</h2>
-							<p></p>
+<p>The noticeable compression ratios were found to be the periodicity failing to pass pressure data from one stage to the next when using the method of dividing the simulation into smaller changes. Temperature data was passed, but this led to a larger compression ratio since the peak in pressure due to the temperature change kept occuring, instead of only happening in the first stage. </p>
 
-							<h2>Skills Learned</h2>
-							<p></p>
+						
+<h2>Documentation</h2>
 
-							<h2>Design and Assumptions</h2>
-							<p></p>
+<div align = "center" style="backround-color:blue;width: 100%; height:660px">
+					<embed style="width: 90%; height: 90%"src="documents/compressor.pdf" type= "application/pdf"><embed> 
+					<div style="width: 70%; height: 70%; margin-top: 60px;">
 
-							<h2>Project Results</h2>
-							<p></p>
-							
-							<div align="center" style="width: 100%; height:660px">
-								<embed style="width: 90%; height: 90%" src="documents/CompressorStageDesign.pdf" type="application/pdf"></embed>
-							</div>
+<h3>3D Models</h3>
 
-							<center>
-							    <img src="images/resultscompressor.png" alt="Results of the compressor stage design." style="width: 60%; height: 60%;"/>
-							    <figcaption>Compressor Stage Design Results</figcaption>
-							</center>
-						</section>
+<div class="image-container">
+<iframe width="100%" height="100%" src="https://sketchfab.com/models/65f945d8684849879fc780ba4cf35f41/embed?autostart=1&camera=0&autospin=1";preload=1" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>	
+   <iframe width="100%" height="100%" src="https://sketchfab.com/models/244271411cd14a5c9caf114ec9461722/embed?autostart=1&camera=0&autospin=1";preload=1" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</div>
+					<figcaption><em>Interactive 3D model of the compressor assembly(L)Fluid for simulation with rotor and stator (R):<b> Scroll to zoom, LMB to rotate, RMB to pan. Press I to inspect the model to see different views! You can also view it in VR.</em></figcaption>
 					</div>
 						
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Petros Sklavounos</li><li>2023</li></ul>
 					</div>
-			
+<div style="margin-top: 640px;">
+						<h2>Results</h2>
+						<div align = "center" style="backround-color:blue;width: 100%; height:660px">
+					<embed style="width: 90%; height: 90%"src="documents/comp_pres.pdf" type= "application/pdf"><embed> 
+					<div style="width: 70%; height: 70%; margin-top: 60px;">
+
+					</div>
+
+				</section>
+			</div>
+
+			<div id="copyright">
+				<ul><li>&copy; Petros Sklavounos</li><li>2023</a></li></ul>
+			</div>
+
 		</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 	</body>
 </html>
+
