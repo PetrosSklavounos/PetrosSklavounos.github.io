@@ -38,31 +38,41 @@
 						<section class="post">
 							<header>
 								<span class="date">March 28, 2023</span>
-								<h1>Measuring the Young’s Modulus of a Vibrating Beam</h1>
+								<h1>Measuring the Youngâ€™s Modulus of a Vibrating Beam</h1>
 							</header>
 							
 							<h2>Objective</h2>
-							<p></p>
+							<p>To utilize the resonant frequency method in a non-destructive manner to calculate the Young's modulus for twelve different beams, including aluminum, brass, steel, and carbon fiber, with various dimensions and cross-sections.</p></p>
 
 							<h2>Methodology</h2>
-							<p></p>
+						<p><strong>Experimental:</strong> The experimental procedure involved manually initiating a free oscillation of the beam by plucking it with a finger at the free length, measuring the acceleration as a function of time, and varying the free length by approximately 17 well-spaced lengths up until the minimum of 5 in. The system was characterized by the general equation for natural frequency of an undamped cantilever beam, with a negligible mass of the accelerometer compared to the beams.</p>
+    <p><strong>Equipment:</strong> The test stand included a clamp connected to a vice, Mitutoyo Analog Vernier Caliper Series 530, Stanley 12 feet measuring tape, Royal ds3 digital scale, PCB Piezotronics 100.1mV/g accelerometer, and National Instruments NI USB-6008 10 kS/s Multifunction I/O and PCB ICP Sensor Signal Conditioner (Model 480C02).</p>
+    <p><strong>Procedure:</strong> The beams were clamped, measured, loaded parallel to the table, and excited with the LabView Software. The natural frequency vs. beam free length was plotted by hand and Excel after recording the data. The frequency was found using Fourier Transform.</p>
 
 							<h2>Skills Learned</h2>
-							<p></p>
-
+							 <ul>
+        <li><strong>Experimental Design:</strong> Development of a testing protocol for measuring natural frequency of cantilever beams using various instruments.</li>
+        <li><strong>Mathematical Modeling:</strong> Application of the general equation for natural frequency, rearrangement of equations to calculate Young's Modulus, and utilization of curve fitting functions such as power law.</li>
+        <li><strong>Data Analysis:</strong> Analyzing raw data, applying Grubbs Test for outliers, and determining the Young's Modulus with an average value of 40.9 GPa for 6061 aluminum beams.</li>
+        <li><strong>Technical Software Skills:</strong> Proficiency in LabView software for signal analysis, natural frequency determination, and data visualization.</li>
+    </ul>
 					
 
 							<h2>Project Results</h2>
-							<p></p>
-							
+							<p>The relationship between natural frequency and free length was found to be a monotonically decreasing function, best captured by a power law fit</p>
+<ul>
+ <li><strong>Data Trends:</strong> Frequency vs. Free Length data revealed monotonically decreasing functional trends. Power trendline matched ideally with data points (r&sup2; = 0.9997).</li>
+    <li><strong>Young's Modulus Determination:</strong> The Young's Modulus values ranged from 31 to 49.5 GPa for aluminum beams, with an average of 40.9 GPa. The values for brass and Carbon Boron Steel beams were 92.5 GPa and 129 GPa, respectively.</li>
+    <li><strong>Error Analysis:</strong> The experiment's uncertainty was &plusmn;5% for frequency, and the obtained Young's Modulus values were off by factors ranging from 1.23 to 1.71 compared to literature values.</li>
+    <li><strong>Safety Considerations:</strong> Precautions included handling sharp edges and electrical equipment with care, wearing safety glasses, and ensuring proper grounding and insulation.</li>
+    <li><strong>Conclusions and Recommendations:</strong> The study successfully applied the resonant frequency method but identified potential sources of discrepancy, including the effect of accelerometer mass and material identity variations. Future work may focus on these areas.</li>
+</ul>
+							<h2>documentation</h2>
 							<div align="center" style="width: 100%; height:660px">
-								<embed style="width: 90%; height: 90%" src="documents/YoungsModulusExperiment.pdf" type="application/pdf"></embed>
+								<embed style="width: 90%; height: 90%" src="documents/m1.pdf" type="application/pdf"></embed>
 							</div>
 
-							<center>
-							    <img src="images/resultmodulus.png" alt="Results of Young's modulus experiment." style="width: 60%; height: 60%;"/>
-							    <figcaption>Young's Modulus Experiment Results</figcaption>
-							</center>
+							
 						</section>
 					</div>
 						
