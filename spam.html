@@ -53,14 +53,14 @@ gap: 10px;
                     
                     <h2>Objective</h2>
                     <p>
-                        The objective of this project is to develop a machine learning model that can effectively classify emails as spam or not spam. The model will use the Naive Bayes algorithm along with TF-IDF vectorization for feature extraction.                     </p>
+                        To develop a machine learning model that can effectively classify emails as spam or not spam when fed their contents through the command prompt. The model will use the Naive Bayes algorithm along with TF-IDF vectorization for feature extraction.                     </p>
                     
                     <h2>Method</h2>
                     <p>
                         <ol>
-                            <li><strong>Text Preprocessing:</strong> The text data undergoes several preprocessing steps before being used for training and testing. These steps include converting all text to lowercase, removing special characters and punctuation, eliminating common English stop words, and removing hyperlinks.</li>
+                            <li><strong>Text Preprocessing:</strong> The text data undergoes several pre-processing steps before being used for training and testing. These steps include converting all text to lowercase, removing special characters and punctuation, eliminating common English stop words, and removing hyperlinks.</li>
                             <li><strong>Data Loading and Cleaning:</strong> The dataset containing email data is loaded from the 'emails.csv' file. Any infinite values are replaced with NaN, and rows with missing elements are dropped to ensure data integrity and reliability.</li>
-                            <li><strong>Data Splitting:</strong> The dataset is split into training and testing sets using a test size of 20%. This partitioning allows the model to be trained on one portion of the data and evaluated on another to assess its generalization capabilities.</li>
+                            <li><strong>Data Splitting:</strong> The dataset is split into training and testing sets using an 80:20 train to test ratio. This partitioning allows the model to be trained on one portion of the data and evaluated on another to assess it to unseen data to prevent overfitting.</li>
                             <li><strong>Feature Extraction:</strong> The text data is transformed into TF-IDF (Term Frequency-Inverse Document Frequency) vectors. This technique converts text into numerical representations, capturing the importance of each word in the context of the entire corpus.</li>
                             <li><strong>Training the Model:</strong> A Multinomial Naive Bayes classifier is chosen for its effectiveness in text classification tasks. The classifier is trained on the TF-IDF vectors of the training data.</li>
                             <li><strong>Model Evaluation:</strong> The trained model is evaluated using the test set to measure its performance. Classification metrics, such as precision, recall, and F1-score, are used to assess the model's accuracy in differentiating spam from non-spam emails.</li>
@@ -87,7 +87,7 @@ gap: 10px;
    <img src="images/spam1.png" />
    <img src="images/spam2.png" />
 </div>
-<p>Both runs have keywords that could be either classification to test robustness, with different context</p>
+<p>Both runs have keywords that could be either classification to test robustness, each with a different context</p>
 				
                 </div>
             </section>
