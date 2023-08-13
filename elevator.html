@@ -36,28 +36,28 @@
                     
                     <h2>Objective</h2>
                     <p>
-                        The objective of this project is to predict abnormal vibrations in an elevator system located in Brazil using machine learning models. By accurately predicting these abnormalities, we can anticipate maintenance needs, prevent potential system failures, thereby improving the efficiency and safety of the elevator.
+                        To predict abnormal vibrations in an elevator system located in Brazil using machine learning models. By accurately predicting these abnormalities, we can anticipate maintenance needs, prevent potential system failures, thereby improving the efficiency and safety of the elevator.
                     </p>
                     
                     <h2>Method</h2>
                     <p>
                         <ol>
-                            <li><strong>Data Acquisition and Cleaning:</strong> Public sensor data from an elevator system was used in this project. The dataset initially contained NaN values in the 'vibration' column, which were replaced with zero to clean the data.</li>
+                            <li><strong>Data Acquisition and Cleaning:</strong> Public sensor data from an elevator system was used in this project. The dataset initially contained NaN (Not a Number) values that were replaced with zero to clean the data.</li>
                             <li><strong>Exploratory Data Analysis:</strong> The dataset was split into training and test sets with an 80:20 ratio.</li>
                             <li><strong>Model Selection and Training:</strong> Linear Regression, Random Forest Regressor, and Gradient Boosting Regressor models were trained on the dataset.</li>
-                            <li><strong>Model Evaluation and Optimization:</strong> The performance of the models was evaluated using the Mean Absolute Error (MAE). Further optimization was achieved by increasing the number of estimators in the Random Forest model to 1000.</li>
+                            <li><strong>Model Evaluation and Optimization:</strong> The performance of the models was evaluated using the Mean Absolute Error (MAE). Further optimization was achieved by increasing the number of estimators to a point where runs were kept short, but optimized.</li>
                         </ol>
                     </p>
 
                     <h2>Software</h2>
                     <p>
-                        Python programming language along with various libraries, including NumPy, Pandas, Scikit-learn, and Matplotlib.
+                        Python programming language along with various libraries, including NumPy, Pandas, Scikit-learn, and Matplotlib were used.
                     </p>
 
                     <h2>Limitations</h2>
                     <p>
                         <ol>
-                            <li><strong>Assumptions on NaN Values:</strong> The project assumes that the NaN values in the vibration data can be replaced with zero, which may not accurately reflect the real-world conditions.</li>
+                            <li><strong>Assumptions on NaN Values:</strong> The project assumes that the NaN values in the vibration data can be replaced with zero, which may not accurately reflect the real-world conditions.Although, it must be said that most sensors who have blanks (NaN) mean that the given sampling frequency doesn't align with the index chosen, meaning that there are just gaps that the sensors didn't measure.</li>
                             <li><strong>Model Assumptions:</strong> The models assume that the relationships between the features and the target variable remain constant over time. In the real world, these relationships may change, requiring the model to be updated or retrained.</li>
                             <li><strong>Evaluation Metric:</strong> The models were evaluated based on a single metric, the Mean Absolute Error. Other metrics, including the Mean Squared Error or R2 score, might provide different perspectives on model performance.</li>
                         </ol>
