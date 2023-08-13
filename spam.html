@@ -7,6 +7,20 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <link rel="icon" type="image/png" href="images/pfp.PNG" />
+<!-- Custom CSS -->
+    <style type="text/css">
+        .image-container {
+            display: flex;
+            justify-content: center; /* Center the images horizontally */
+gap: 10px;
+            align-items: center; /* Center the images vertically */
+        }
+
+        .image-container img {
+            width:500px; /* Set the width to 50% to make them take half the container */
+            height: 150px; /* Maintain the aspect ratio */
+        }
+    </style>
 </head>
 <body class="is-preload">
 <div style="zoom: 80%;">
@@ -68,6 +82,13 @@
                             <li><strong>Email Content Complexity:</strong> The model's effectiveness may vary based on the complexity and structure of the email content. Some sophisticated spam emails may go undetected.This is why I chose a, 'paste the content of the email into the terminal' approach so that it would greatly simplify this problem of reading emails.  </li>
                         </ol>
                     </p>
+                <h2>Example Runs</h2>
+				<div class="image-container">
+   <img src="images/spam1.png" />
+   <img src="images/spam2.png" />
+</div>
+<p>Both runs have keywords that could be either classification to test robustness, with different context</p>
+				
                 </div>
             </section>
         </div>
