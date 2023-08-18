@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <link rel="icon" type="image/png" href="images/pfp.PNG" />
-	 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.6/pdfobject.min.js"></script>
+	
 </head>
 <body class="is-preload">
 <div style="zoom: 80%;">
@@ -35,12 +35,11 @@
                 </header>
                 <div align="center" style="width: 100%; height:660px">
                         <h2 style="text-align: left;">KNOWLEDGE DOCUMENTATION FOR FUTURE SELF</h2>
-                      <div id="pdf-viewer" style="width: 90%; height: 90%;"></div>
-              </div>
+                     <iframe src="https://docs.google.com/viewer?url=http://www.orimi.com/pdf-test.pdf&embedded=true" frameborder="0" height="500px" width="100%"></iframe> </div>
                     
                     <h2>Objective</h2>
                     <p>
-                        To develop an algorithm that can solve Sudoku puzzles. The algorithm should be able to take any valid Sudoku grid as input and return the completed grid as output. The project was also an opportunity for me to improve my Python programming skills and to learn more about algorithms and data structures.
+                        The objective of this project was to develop an algorithm that can solve Sudoku puzzles. The algorithm should be able to take any valid Sudoku grid as input and return the completed grid as output. The project was also an opportunity for me to improve my Python programming skills and to learn more about algorithms and data structures.
                     </p>
                     
                     <h2>Method</h2>
@@ -50,7 +49,8 @@
 
                    <h2>Software</h2>
 <p>
-      <ul>
+    The project made use of several software libraries and tools for various tasks:
+    <ul>
         <li><strong>OpenCV:</strong> This computer vision library was utilized for image preprocessing tasks such as line extraction and noise removal, among other image manipulation tasks.</li>
         <li><strong>Tesseract OCR:</strong> An open-source Optical Character Recognition (OCR) engine was employed for character recognition in the Sudoku grids.</li>
         <li><strong>NumPy:</strong> This numerical computing library was integral in handling grid data structures and array operations.</li>
@@ -79,9 +79,5 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
-	 <script>
-            PDFObject.embed("https://petrossklavounos.github.io/documents/sudoku.pdf", "#pdf-viewer");
-        </script>
-   
 	 </body>
 </html>
