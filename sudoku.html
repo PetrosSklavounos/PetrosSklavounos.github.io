@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <link rel="icon" type="image/png" href="images/pfp.PNG" />
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.6/pdfobject.min.js"></script>
 </head>
 <body class="is-preload">
 <div style="zoom: 80%;">
@@ -30,12 +31,12 @@
             <section class="post">
                 <header>
                     <span class="date">June 28, 2023</span>
-                    <h1>Automated Sudoku Solver using OCR and Backtracking Algorithm</h1>
+                    <h1>Algorithm Design Project: Sudoku Solver</h1>
                 </header>
                 <div align="center" style="width: 100%; height:660px">
                         <h2 style="text-align: left;">KNOWLEDGE DOCUMENTATION FOR FUTURE SELF</h2>
-                        <embed style="width: 90%; height: 90%" src="documents/sudoku.pdf" type="application/pdf"></embed> 
-                    </div>
+                      <div id="pdf-viewer" style="width: 90%; height: 90%;"></div>
+              </div>
                     
                     <h2>Objective</h2>
                     <p>
@@ -58,11 +59,11 @@
     </ul>
     <center>
 							    <img src="images/preprocess.png" alt="Complete Pre-Processing Steps Used" style="width: 80%; height: 80%;"/>
-							    <figcaption>Complete Pre-Processing Steps</figcaption>
+							    <figcaption>Table Design with FEA Simulation</figcaption>
 							</center>
                     <h2>Limitations</h2>
                     <p>
-                        The limitations of this project include the backtracking algorithm which is considered bruteforcing. While quick in its execution, the algorithm has to check every possible number for every empty spot in the grid making it inefficient. Lastly, there hasn't been much consideration to angled images fed to the program, meaning that off-centre photos may need more manual correction than usual. 
+                        The limitations of this project include the time complexity of the backtracking algorithm. The algorithm has to check every possible number for every empty spot in the grid, so it can be slow for larger or more difficult puzzles. Furthermore, the algorithm does not handle invalid Sudoku grids. If the input grid is not a valid Sudoku puzzle, the algorithm will not be able to solve it.
                     </p>
                 </div>
             </section>
@@ -78,5 +79,9 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
-</body>
+	 <script>
+            PDFObject.embed("https://petrossklavounos.github.io/documents/sudoku.pdf", "#pdf-viewer");
+        </script>
+   
+	 </body>
 </html>
