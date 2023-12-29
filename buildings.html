@@ -7,6 +7,8 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<link rel="icon" type="image/png" href="images/pfp.PNG" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.5/pdfobject.min.js"></script>
+
 	</head>
 	<body class="is-preload">
 	<div style="zoom: 80%;">
@@ -37,7 +39,8 @@
 AND SENSOR DATA ANALYTICS</h1>
 					</header>
 					<div align = "center" style="backround-color:blue;width: 100%; height:660px">
-					 <iframe src="https://docs.google.com/viewer?url=https://petrossklavounos.github.io/documents/building.pdf&embedded=true" frameborder="0" height="580px" width="100%"></iframe>
+					<div id="pdf-viewer" style="width:100%; height:600px;"></div>
+
 					<div style="width: 70%; height: 70%; margin-top: 20px;">
 					<iframe width="100%" height="100%" src="https://sketchfab.com/models/737b7ce3dd1942a8bd682ab4ee34b56c/embed?autostart=1&camera=0&autospin=1";preload=1" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 					<figcaption><em>Interactive 3D model of the Room 506: Scroll to zoom, LMB to rotate, RMB to pan. Press I to inspect the model to see different views! You can also view it in VR.</em></figcaption>
@@ -96,6 +99,9 @@ AND SENSOR DATA ANALYTICS</h1>
 			</div>
 
 		</div>
+		  <script>
+        PDFObject.embed("https://petrossklavounos.github.io/documents/building.pdf", "#pdf-viewer");
+    </script>
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/jquery.scrollex.min.js"></script>
 		<script src="assets/js/jquery.scrolly.min.js"></script>
