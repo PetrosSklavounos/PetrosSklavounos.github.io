@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+"<!DOCTYPE HTML>
 <html>
 	<head>
 		<title>CFD AND SENSOR DATA ANALYTICS CO2 sensors Project-Petros</title>
@@ -36,8 +36,15 @@
 						<h1>OPTIMIZING CO2 SENSOR PLACEMENT IN 41 COOPER CLASSROOMS VIA CFD
 AND SENSOR DATA ANALYTICS</h1>
 					</header>
-					<div align = "center" style="backround-color:blue;width: 100%; height:660px">
-					 <iframe src="https://docs.google.com/viewer?url=https://petrossklavounos.github.io/documents/building.pdf&embedded=true" frameborder="0" height="580px" width="100%"></iframe>
+					  <div align="center" style="width: 100%; height:auto;">
+                <p>If the PDF failed to load, download to view here: <a href="https://petrossklavounos.github.io/documents/building.pdf" download>Download PDF</a></p>
+                   <iframe id="pdfIframe" src="https://petrossklavounos.github.io/documents/building.pdf" frameborder="0" style="height: 580px; width: 100%; border: 1px solid #000000;"></iframe>
+                
+            
+				<div id="fallbackMessage" style="display:none;">
+                <p>PDF failed to load. <a href="https://petrossklavounos.github.io/documents/building.pdf" download>Click here to download the PDF</a> or <button onclick="reloadIframe()">reload</button> the viewer.</p>
+            </div>
+        
 					<div style="width: 70%; height: 70%; margin-top: 20px;">
 					<iframe width="100%" height="100%" src="https://sketchfab.com/models/737b7ce3dd1942a8bd682ab4ee34b56c/embed?autostart=1&camera=0&autospin=1";preload=1" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 					<figcaption><em>Interactive 3D model of the Room 506: Scroll to zoom, LMB to rotate, RMB to pan. Press I to inspect the model to see different views! You can also view it in VR.</em></figcaption>
@@ -46,7 +53,7 @@ AND SENSOR DATA ANALYTICS</h1>
 					</div>
 					
 					<!-- Post Content -->
-					<div style="margin-top: 640px;">
+					<div style="margin-top: 80px;">
 						<h2>Objective</h2>
 						<p> To assess and optimize CO2 sensor locations in Room 506 at 41 Cooper Square. By employing Computational Fluid Dynamics (CFD) simulations alongside empirical data, the study seeks to identify the most representative sensor position for capturing the volumetric bulk average of CO2 concentration. This refined placement will enable more accurate measurements for the building management system (BMS), ensuring effective ventilation control and maintaining optimal indoor air quality for enhanced student health and cognitive performance.</p>
 						<h2>Software Used</h2>
@@ -103,5 +110,21 @@ AND SENSOR DATA ANALYTICS</h1>
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+		 <script>
+        // Check if the iframe has loaded successfully
+        document.getElementById('pdfIframe').onload = function() {
+            var iframeDocument = this.contentDocument || this.contentWindow.document;
+            // Check if the iframe's body is empty (indicating a failed load)
+            if (iframeDocument.body.children.length === 0) {
+                document.getElementById('fallbackMessage').style.display = 'block';
+            }
+        };
+
+        // Function to reload the iframe
+        function reloadIframe() {
+            document.getElementById('pdfIframe').src += '';
+        }
+    </script>
 	</body>
 </html>
+"
