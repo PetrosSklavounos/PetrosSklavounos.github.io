@@ -7,7 +7,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
-	<link rel="icon" type="image/png" href="img/pfp.PNG" />
+    <link rel="icon" type="image/png" href="img/pfp.PNG" />
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -15,7 +15,7 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -31,6 +31,56 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <style>
+        .form-floating input,
+        .form-floating textarea {
+            color: #000000; /* Change this color to your desired font color */
+        }
+
+        .form-floating label {
+            color: #000000; /* Change this color to your desired label color */
+        }
+
+        /* Scroll Indicator */
+        .progress-indicator {
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+            background: transparent;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            transition: background 0.3s, box-shadow 0.3s;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .progress-indicator:hover {
+            background: #e0e0e0;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        #progress-arrow {
+            color: white;
+            transition: color 0.3s;
+            font-size: 2em; /* Makes the arrow larger */
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Black outline */
+        }
+
+        .mb-5 {
+            margin-bottom: 3rem !important;
+        }
+
+        .mt-2 {
+            margin-top: 0.5rem !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -43,42 +93,39 @@
     <!-- Spinner End -->
 
 
-   <!-- Topbar Start -->
-<div class="container-fluid bg-light p-0">
-    <div class="row gx-0 d-none d-lg-flex">
-        <div class="col-lg-7 px-5 text-start">
-            <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                <small class="fa fa-map-marker-alt text-primary me-2"></small>
-                <small>New York, USA</small>
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light p-0">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
+                    <small>New York, USA</small>
+                </div>
             </div>
-        </div>
-        <div class="col-lg-5 px-5 text-end">
-            <!-- LinkedIn Icon with Text -->
-            <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                <a href="https://www.linkedin.com/in/petros-sklavounos-b2b726231/?trk=public_profile_browsemap" target="_blank" class="text-decoration-none">
-                    <small class="fab fa-linkedin text-primary me-2"></small>
-                    <small>LinkedIn</small>
-                </a>
+            <div class="col-lg-5 px-5 text-end">
+                <!-- LinkedIn Icon with Text -->
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <a href="https://www.linkedin.com/in/petros-sklavounos-b2b726231/?trk=public_profile_browsemap" target="_blank" class="text-decoration-none">
+                        <small class="fab fa-linkedin text-primary me-2"></small>
+                        <small>LinkedIn</small>
+                    </a>
+                </div>
+                <!-- Email -->
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-envelope text-primary me-2"></small>
+                    <small><a href="mailto:peter.sklavounos@yahoo.com" class="email-link">peter.sklavounos@yahoo.com</a></small>
+                </div>
             </div>
-            <!-- Email -->
-            <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-    <small class="fa fa-envelope text-primary me-2"></small>
-    <small><a href="mailto:peter.sklavounos@yahoo.com" class="email-link">peter.sklavounos@yahoo.com</a></small>
-</div>
-
-            
         </div>
     </div>
-</div>
-<!-- Topbar End -->
+    <!-- Topbar End -->
 
 
-   <!-- Navbar Start -->
+    <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
         <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-			<img src="img/circle.png" alt="Logo" style="height: 24px; width: auto; margin-right: 10px;">
-       
-		   <h2 class="m-0 text-primary"></h2>
+            <img src="img/circle.png" alt="Logo" style="height: 24px; width: auto; margin-right: 10px;">
+            <h2 class="m-0 text-primary"></h2>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -87,33 +134,25 @@
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="index.html" class="nav-item nav-link">Home</a>
                 <a href="about.html" class="nav-item nav-link">About Me</a>
-				
-				 <div class="nav-item dropdown">
+                <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Projects</a>
                     <div class="dropdown-menu fade-up m-0">
                         <a href="team.html" class="dropdown-item">Coding</a>
-						<a href="feature.html" class="dropdown-item">Computational Fluid Dynamics</a>
-						<a href="testimonial.html" class="dropdown-item">Engineering Experimentation</a>
-						<a href="feature.html" class="dropdown-item">Finite Element Analysis</a>
-						<a href="team.html" class="dropdown-item">Heat Transfer</a>
-						<a href="testimonial.html" class="dropdown-item">Literary Research</a>
-						<a href="quote.html" class="dropdown-item">Machine Learning</a>
-						<a href="team.html" class="dropdown-item">Manufacturing</a>
-						<a href="testimonial.html" class="dropdown-item">Mechanical Design</a>
-						<a href="quote.html" class="dropdown-item">Product Design/Development</a>
-						<a href="quote.html" class="dropdown-item">Renewable Energy</a>
-
-                      
+                        <a href="feature.html" class="dropdown-item">Computational Fluid Dynamics</a>
+                        <a href="testimonial.html" class="dropdown-item">Engineering Experimentation</a>
+                        <a href="feature.html" class="dropdown-item">Finite Element Analysis</a>
+                        <a href="team.html" class="dropdown-item">Heat Transfer</a>
+                        <a href="testimonial.html" class="dropdown-item">Literary Research</a>
+                        <a href="quote.html" class="dropdown-item">Machine Learning</a>
+                        <a href="team.html" class="dropdown-item">Manufacturing</a>
+                        <a href="testimonial.html" class="dropdown-item">Mechanical Design</a>
+                        <a href="quote.html" class="dropdown-item">Product Design/Development</a>
+                        <a href="quote.html" class="dropdown-item">Renewable Energy</a>
                     </div>
                 </div>
-				<a href="hobbies.html" class="nav-item nav-link">Hobbies</a>
-				<a href="gallery.html" class="nav-item nav-link">Gallery</a>
-				<a href="resume.html" class="nav-item nav-link">Resume</a>
-				 
-                
-               
-                
-                
+                <a href="hobbies.html" class="nav-item nav-link">Hobbies</a>
+                <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+                <a href="resume.html" class="nav-item nav-link">Resume</a>
             </div>
             <a href="contact.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Contact Me<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
@@ -139,36 +178,33 @@
 
     <!-- Contact Start -->
     <div class="container-fluid bg-light overflow-hidden px-lg-0" style="margin: 6rem 0;">
-    <div class="container contact px-lg-0">
-        <div class="row g-0 mx-lg-0">
-            <div class="col-lg-6 contact-text py-5 wow fadeIn" data-wow-delay="0.5s">
-                <div class="p-lg-5 ps-lg-0">
-                    <div class="section-title text-start">
-                        <h1 class="display-5 mb-4">Contact Form</h1>
+        <div class="container contact px-lg-0">
+            <div class="row g-0 mx-lg-0">
+                <div class="col-lg-6 contact-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="p-lg-5 ps-lg-0">
+                        <div class="section-title text-start">
+                            <h1 class="display-5 mb-4">Contact Form</h1>
+                        </div>
+                        <form action="https://formspree.io/f/xzbnapeq" method="POST">
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+                                <label for="email">Your Email</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" placeholder="Leave a message here" id="message" name="message" style="height: 150px" required></textarea>
+                                <label for="message">Your Message</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100 py-3">Send</button>
+                        </form>
                     </div>
-                    <form action="https://formspree.io/f/xzbnapeq" method="POST">
-                        <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
-                            <label for="email">Your Email</label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <textarea class="form-control" placeholder="Leave a message here" id="message" name="message" style="height: 150px" required></textarea>
-                            <label for="message">Your Message</label>
-                        </div>
-                        <button type="submit" class="btn btn-primary w-100 py-3">Send</button>
-                    </form>
                 </div>
-            </div>
                 <div class="col-lg-6 pe-lg-0" style="min-height: 400px;">
-                    <div class="position-relative" style="height: 70vh;">>
-    <iframe class="position-absolute w-100 h-100" style="object-fit: cover; height: 50%;"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.542527598434!2d-73.99418352452348!3d40.72808623663147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2599b7321f1df%3A0x145b3087e1c93646!2sThe%20Cooper%20Union!5e0!3m2!1sen!2sus!4v1710896091044!5m2!1sen!2sus"
-            frameborder="0" allowfullscreen="" aria-hidden="false"
-            tabindex="0"></iframe>
-</div>
-
-	
-
+                    <div class="position-relative" style="height: 70vh;">
+                        <iframe class="position-absolute w-100 h-100" style="object-fit: cover; height: 50%;"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.542527598434!2d-73.99418352452348!3d40.72808623663147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2599b7321f1df%3A0x145b3087e1c93646!2sThe%20Cooper%20Union!5e0!3m2!1sen!2sus!4v1710896091044!5m2!1sen!2sus"
+                                frameborder="0" allowfullscreen="" aria-hidden="false"
+                                tabindex="0"></iframe>
+                    </div>
                 </div>
             </div>
         </div>
@@ -177,44 +213,72 @@
 
 
     <!-- Footer Start -->
-    <!-- Footer Start -->
-<div class="container-fluid bg-dark text-light footer wow fadeIn" data-wow-delay="0.1s" style="margin-top: 5rem; padding-top: 5rem;">
-    <div class="container py-5">
-        <div class="row g-5">
-            <div class="col-lg-3 col-md-6">
-                <h5 class="text-white mb-4">Address</h5>
-                <p><i class="fa fa-map-marker-alt me-3"></i>New York, USA</p>
-               <p><a href="tel:+16464277255" class="phone-number-link"><i class="fa fa-phone-alt me-3"></i>+6464277255</a></p>
-<p><a href="mailto:peter.sklavounos@yahoo.com" class="email-link"><i class="fa fa-envelope me-3"></i><small>peter.sklavounos@yahoo.com</small></a></p>
-
-                <div class="d-flex pt-2">
-                    <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/peter7542/"><i class="fab fa-instagram"></i></a>
-                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>                 
-                    <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/petros-sklavounos-b2b726231/?trk=public_profile_browsemap"><i class="fab fa-linkedin-in"></i></a>
+    <div class="container-fluid bg-dark text-light footer wow fadeIn" data-wow-delay="0.1s" style="margin-top: 5rem; padding-top: 5rem;">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Address</h5>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>New York, USA</p>
+                    <p><a href="tel:+16464277255" class="phone-number-link"><i class="fa fa-phone-alt me-3"></i>+6464277255</a></p>
+                    <p><a href="mailto:peter.sklavounos@yahoo.com" class="email-link"><i class="fa fa-envelope me-3"></i><small>peter.sklavounos@yahoo.com</small></a></p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/peter7542/"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/petros-sklavounos-b2b726231/?trk=public_profile_browsemap"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
                 </div>
-            </div>
-                
-                
-                
+                <div class="col-lg-6 col-md-6">
+                    <h5 class="text-white mb-4">Contact Me</h5>
+                    <form action="https://formspree.io/f/xzbnapeq" method="POST">
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="email" placeholder="Your Email" name="email" required>
+                            <label for="email">Your Email</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" id="message" placeholder="Leave a message here" name="message" style="height: 150px" required></textarea>
+                            <label for="message">Your Message</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary py-3 w-100">Send</button>
+                    </form>
+                </div>
             </div>
         </div>
         <div class="container mt-4">
-        <div class="row">
-            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                &copy; <a class="text-white" href="#">PetrosSklavounos</a>, All Right Reserved.
-            </div>
-            <div class="col-md-6 text-center text-md-end">
-                <a class="text-white" href="https://htmlcodex.com">HTML Codex</a> and Petros Sklavounos
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="text-white" href="#">PetrosSklavounos</a>, All Right Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a class="text-white" href="https://htmlcodex.com">HTML Codex</a> and Petros Sklavounos
+                </div>
             </div>
         </div>
     </div>
-    </div>
     <!-- Footer End -->
 
-
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <script>
+        window.addEventListener('scroll', function () {
+            var docHeight = document.body.offsetHeight;
+            var windowHeight = window.innerHeight;
+            var scrollPosition = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+            var scrollPercent = scrollPosition / (docHeight - windowHeight);
+            var scrollPercentRounded = Math.round(scrollPercent * 100);
 
+            // Update the background of the progress indicator
+            var progressIndicator = document.getElementById('progress-indicator');
+            progressIndicator.style.background = 'linear-gradient(to top, #ab7b4c ' + scrollPercentRounded + '%, transparent ' + scrollPercentRounded + '%)';
+        });
+
+        // Smooth scroll to top
+        document.getElementById('progress-indicator').addEventListener('click', function (e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+    <a href="#" class="progress-indicator" id="progress-indicator" title="Scroll to top">
+        <span id="progress-arrow">&#x2191;</span>
+    </a>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -224,6 +288,8 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
