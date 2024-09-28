@@ -46,3 +46,5 @@ Disallow: /tunnel.html
 Disallow: /vibration.html
 Disallow: /wheel.html
 Disallow: /wheeldesign.html
+
+Sitemap: https://petrossklavounos.github.io/sitemap.xml
