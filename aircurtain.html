@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Principles of HVAC Air Curtains and Impact of Mass Flow Rates-Petros Sklavounos</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" type="image/png" href="img/pfp.PNG" />
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .form-floating input,
+        .form-floating textarea {
+            color: #000000; /* Change this color to your desired font color */
+        }
+
+        .form-floating label {
+            color: #000000; /* Change this color to your desired label color */
+        }
+
+        /* Scroll Indicator */
+        .progress-indicator {
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+            background: transparent;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            transition: background 0.3s, box-shadow 0.3s;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .progress-indicator:hover {
+            background: #e0e0e0;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        #progress-arrow {
+            color: white;
+            transition: color 0.3s;
+            font-size: 2em; /* Makes the arrow larger */
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Black outline */
+        }
+
+        .mb-5 {
+            margin-bottom: 3rem !important;
+        }
+
+        .mt-2 {
+            margin-top: 0.5rem !important;
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light p-0">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
+                    <small>New York, USA</small>
+                </div>
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <!-- LinkedIn Icon with Text -->
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <a href="https://www.linkedin.com/in/petros-sklavounos-b2b726231/?trk=public_profile_browsemap" target="_blank" class="text-decoration-none">
+                        <small class="fab fa-linkedin text-primary me-2"></small>
+                        <small>LinkedIn</small>
+                    </a>
+                </div>
+                <!-- Email -->
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-envelope text-primary me-2"></small>
+                    <small><a href="mailto:peter.sklavounos@yahoo.com" class="email-link">peter.sklavounos@yahoo.com</a></small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <img src="img/circle.png" alt="Logo" style="height: 24px; width: auto; margin-right: 10px;">
+            <h2 class="m-0 text-primary"></h2>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link ">Home</a>
+                <a href="about.html" class="nav-item nav-link">About Me</a>
+                <div class="nav-item dropdown">
+                    <a href="project.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Projects</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="project.html" class="dropdown-item">All Projects</a>
+                        <a href="project.html?filter=coding" class="dropdown-item">Coding</a>
+                        <a href="project.html?filter=cfd" class="dropdown-item">Computational Fluid Dynamics</a>
+                        <a href="project.html?filter=engineering-experimentation" class="dropdown-item">Engineering Experimentation</a>
+                        <a href="project.html?filter=fea" class="dropdown-item">Finite Element Analysis</a>
+                        <a href="project.html?filter=heat-transfer" class="dropdown-item">Heat Transfer</a>
+                        <a href="project.html?filter=literary-research" class="dropdown-item">Literary Research</a>
+                        <a href="project.html?filter=machine-learning" class="dropdown-item">Machine Learning</a>
+                        <a href="project.html?filter=manufacturing" class="dropdown-item">Manufacturing</a>
+                        <a href="project.html?filter=mechanical-design" class="dropdown-item">Mechanical Design</a>
+                        <a href="project.html?filter=product-design-development" class="dropdown-item">Product Design/Development</a>
+                        <a href="project.html?filter=renewable-energy" class="dropdown-item">Renewable Energy</a>
+                    </div>
+                </div>
+                <a href="hobbies.html" class="nav-item nav-link">Hobbies</a>
+                <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+                <a href="resume.html" class="nav-item nav-link">Resume</a>
+            </div>
+            <a href="contact.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Contact Me<i class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Main Section Start -->
+    <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+        <div class="container feature px-lg-0">
+            <div class="row g-0 mx-lg-0">
+                <div class="col-lg-12 feature-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="p-lg-5 ps-lg-0">
+                        <div class="section-title text-start">
+                            <h1 class="display-5 mb-4">Principles of HVAC Air Curtains and the Impact of Mass Flow Rate on Thermal Barrier Effectiveness</h1>
+                            <span class="date">December 20, 2024</span>
+                        </div>
+                        <div class="content-section">
+                            <div class="mb-5">
+                                <h2 class="mb-3">Documentation</h2>
+                                <p><a href="https://petrossklavounos.github.io/documents/aircurtain.pdf" download>Download Report</a></p>
+                            </div>
+                            <div class="mb-5">
+    <h2 class="mb-3">Objective</h2>
+    <p>This study investigates the thermal and fluid dynamic behavior of air curtains as a solution for maintaining thermal barriers between adjacent environments. Through computational fluid dynamics (CFD) simulations, the project aims to evaluate the effectiveness of varying mass flow rates in minimizing thermal infiltration while balancing energy consumption and performance.</p>
+</div>
+
+<div class="mb-5">
+    <h2 class="mb-3">Summary</h2>
+    <p>This study demonstrated that higher air curtain mass flow rates significantly reduced thermal infiltration, achieving superior thermal separation but at the cost of increased energy consumption. Lower flow rates provided a more energy-efficient solution while still maintaining moderate thermal isolation. The findings highlighted a trade-off between performance and energy efficiency, underscoring the importance of optimal configuration for various applications.</p>
+</div>
+
+<div class="mb-5">
+    <h2 class="mb-3">Skills Learned</h2>
+    <p>Through this project, I developed expertise in computational fluid dynamics (CFD) using ANSYS Fluent, focusing on steady-state simulations and the analysis of fluid flow and heat transfer. Key techniques included implementing boundary conditions, analyzing jet dynamics, and optimizing flow configurations for energy efficiency and thermal performance.</p>
+    <p>I enhanced my ability to preprocess and post-process simulation data, utilizing Python and MATLAB for tasks such as mesh refinement, temperature contour analysis, and data visualization. I also learned advanced turbulence modeling, applying the SST k-ω model to accurately capture boundary layer effects and shear flows.</p>
+    <p>Additionally, I acquired skills in numerical methods for solving Navier-Stokes and energy equations, alongside the use of validation metrics such as the Deflection Modulus and Reynolds number to evaluate thermal and aerodynamic performance. Visualization techniques, including generating temperature and velocity contour plots, further improved my ability to present complex simulation results effectively.</p>
+</div>
+
+<div class="mb-5">
+    <h2 class="mb-3">Methodology</h2>
+    <p>The analysis utilized computational fluid dynamics simulations with steady-state conditions to evaluate three scenarios: high, low, and no mass flow rates for air curtains. Parameters such as mass flow rate, temperature gradients, and recirculation dynamics were analyzed using the SST k-ω turbulence model. Data for boundary conditions and fluid properties were sourced from academic literature and validated using established equations and experimental findings.</p>
+</div>
+
+							
+							
+    <h2 class="mb-3">Discussion and Conclusion</h2>
+<p>This study examined the thermal and fluid dynamic performance of air curtains as a thermal barrier between adjacent spaces, utilizing computational fluid dynamics (CFD) simulations. The results demonstrated that higher mass flow rates significantly reduced thermal infiltration, achieving superior temperature gradients and minimizing mixing between warm and cool regions. The Deflection Modulus calculations supported these findings, showing improved aerodynamic stability at higher flow rates.</p>
+
+<p>However, the energy efficiency analysis revealed a substantial trade-off: the high mass flow scenario consumed 216 times more energy than the low flow scenario while only achieving a modest additional temperature reduction of 1.38°C in the second room. This highlights the importance of balancing performance with operational cost when configuring air curtains for different applications.</p>
+
+<p>The study also uncovered the limitations of low flow rates in maintaining effective thermal barriers due to insufficient jet momentum and increased susceptibility to recirculation and turbulence. These effects were observed through temperature contour plots and streamline visualizations, which showed significant warm air infiltration in low-flow and no-flow scenarios.</p>
+
+<p>Future work could focus on optimizing nozzle geometries, integrating adaptive flow systems, and incorporating transient environmental conditions to improve air curtain efficiency. Experimental validation of the CFD results would further enhance reliability and provide practical insights for real-world implementation.</p>
+</div>
+
+ <div class="mb-5">
+                                <h2 class="mb-3">Report</h2>
+                                <div class="text-center mb-3" style="width: 100%; height:660px">
+                                    <p>If the PDF failed to load, refresh or click to view here: <a href="https://petrossklavounos.github.io/documents/aircurtain.pdf" download>View PDF</a></p>
+                                    <iframe src="https://docs.google.com/viewer?url=https://petrossklavounos.github.io/documents/aircurtain.pdf&embedded=true" frameborder="0" height="580px" width="100%" style="border: 1px solid black;"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer wow fadeIn" data-wow-delay="0.1s" style="margin-top: 5rem; padding-top: 5rem;">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Address</h5>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>New York, USA</p>
+                    <p><a href="tel:+16464277255" class="phone-number-link"><i class="fa fa-phone-alt me-3"></i>+6464277255</a></p>
+                    <p><a href="mailto:peter.sklavounos@yahoo.com" class="email-link"><i class="fa fa-envelope me-3"></i><small>peter.sklavounos@yahoo.com</small></a></p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/peter7542/"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/petros-sklavounos-b2b726231/?trk=public_profile_browsemap"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <h5 class="text-white mb-4">Contact Me</h5>
+                    <form action="https://formspree.io/f/xzbnapeq" method="POST">
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="email" placeholder="Your Email" name="email" required>
+                            <label for="email">Your Email</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" id="message" placeholder="Leave a message here" name="message" style="height: 150px" required></textarea>
+                            <label for="message">Your Message</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary py-3 w-100">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="text-white" href="#">PetrosSklavounos</a>, All Right Reserved.
+                </div>
+                        <div class="col-md-6 text-center text-md-end">
+            <a href="https://htmlcodex.com" class="credit-link" style="font-size: 10px; color: #555; text-decoration: none; opacity: 0.3;">HTML Codex</a>
+        </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script>
+        window.addEventListener('scroll', function () {
+            var docHeight = document.body.offsetHeight;
+            var windowHeight = window.innerHeight;
+            var scrollPosition = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+            var scrollPercent = scrollPosition / (docHeight - windowHeight);
+            var scrollPercentRounded = Math.round(scrollPercent * 100);
+
+            // Update the background of the progress indicator
+            var progressIndicator = document.getElementById('progress-indicator');
+            progressIndicator.style.background = 'linear-gradient(to top, #ab7b4c ' + scrollPercentRounded + '%, transparent ' + scrollPercentRounded + '%)';
+        });
+
+        // Smooth scroll to top
+        document.getElementById('progress-indicator').addEventListener('click', function (e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+    <a href="#" class="progress-indicator" id="progress-indicator" title="Scroll to top">
+        <span id="progress-arrow">&#x2191;</span>
+    </a>
+</body>
+
+</html>
